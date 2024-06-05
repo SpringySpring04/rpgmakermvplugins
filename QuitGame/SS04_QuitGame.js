@@ -35,7 +35,7 @@
  *        restructured code to look nicer
  *  v1.0.0:
  *      * Initial creation
- *  
+ *  +==============================================================
 */
 
 (function() {
@@ -67,7 +67,7 @@
             this.addWindow(this._commandWindow);
         };
     }
-    
+
     if (enableGameEndCommand) {
         var _Window_GameEnd_makeCommandList = Window_GameEnd.prototype.makeCommandList;
         Window_GameEnd.prototype.makeCommandList = function() {
