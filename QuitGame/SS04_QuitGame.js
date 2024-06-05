@@ -10,7 +10,10 @@
  * @desc The text displayed for the "quit" option in the Game End screen in the in-game menu
  * @default Quit
  * 
- * @help This plugin does not provide plugin commands
+ * @help 
+ * SS04_QuitGame.js
+ * Version 1.0.0
+ * Adds "Quit" option to title screen and in-game menu
 */
 
 (function() {
