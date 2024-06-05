@@ -24,12 +24,16 @@
  * 
  * @help 
  * SS04_QuitGame.js
- * Version 1.0.1
+ * Version 1.0.2
  * Adds "Quit" option to title screen and in-game menu
  * 
  *  +==============================================================
  *  * Changelog
  *  +--------------------------------------------------------------
+ *  v1.0.2:
+ *      * Fixed bug where "Enable [menu] command" still displayed the 
+ *        quit command when the parameter was set to false because
+ *        RPG Maker MV stores boolean parameters as a string???
  *  v1.0.1:
  *      * Added separate "Enable [menu] command" parameter for each screen,
  *        restructured code to look nicer
@@ -41,8 +45,8 @@
 (function() {
 
     var parameters = PluginManager.parameters('SS04_QuitGame');
-    var enableTitleCommand = Boolean(parameters['Enable Title Quit Command'] || true);
-    var enableGameEndCommand = Boolean(parameters['Enable Game End Quit Command'] || true);
+    var enableTitleCommand = parameters['Enable Title Quit Command'] == "true";
+    var enableGameEndCommand = parameters['Enable Game End Quit Command'] == "true";
     var titleQuitText = String(parameters['Title Quit Text'] || "Quit");
     var gameEndQuitText = String(parameters['Game End Quit Text'] || "Quit");
     
