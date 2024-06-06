@@ -24,12 +24,14 @@
  * 
  * @help 
  * SS04_QuitGame.js
- * Version 1.0.2
+ * Version 1.0.3
  * Adds "Quit" option to title screen and in-game menu
  * 
  *  +==============================================================
  *  * Changelog
  *  +--------------------------------------------------------------
+ *  v1.0.3:
+ *      * Added the "Imported" syntax for plugin compatibility support
  *  v1.0.2:
  *      * Fixed bug where "Enable [menu] command" still displayed the 
  *        quit command when the parameter was set to false because
@@ -41,6 +43,9 @@
  *      * Initial creation
  *  +==============================================================
 */
+
+var Imported = Imported || {};
+Imported.SS04_QuitGame = "1.0.3";
 
 (function() {
 
